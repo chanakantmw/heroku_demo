@@ -22,10 +22,7 @@ connection.once("open", () => {
     console.log(" MongoDB connected !!");
 });
 
-//--------------------------- hiiiiiiiiiiiiiiiiiiiiiiiii ----------------------
 
-////ddd
-////////////ddddfd
 //----------------------------------------------------------------------------------------------------------------
 //middleware
 const User = Schema({
