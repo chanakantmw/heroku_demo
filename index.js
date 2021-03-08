@@ -28,20 +28,21 @@ const User = Schema({
 
 app.use(express.json());
 const myColl = mongoose.model('users', User)
-    /* app.route("/api").get(async(_req, res) => {
-        var result = await myColl.find({}).sort({
-            _id: -1,
-        }).limit(500);
-        res.json(result)
-    })
-     */
-app.get('/api1', async(_req, res) => {
+app.route("/api").get(async(_req, res) => {
+    var result = await myColl.find({}).sort({
+        _id: -1,
+    }).limit(500);
+    res.json(result)
+})
+
+/* app.get('/api1', async(_req, res) => {
 
     var result = await myColl.find({}).sort({ _id: -1, }).limit(500);
     res.json(result)
-})
+}) */
 
 /* app.get("/get", (req, res) => res.json("test get"));
 app.route("/test").get((req, res) => res.json("test"));
 app.route("/welcome").get((req, res) => res.json("Welcome")); */
+
 app.listen(port, () => console.log(`welcome your listinnig at port ${port}`));
